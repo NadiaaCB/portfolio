@@ -1,0 +1,925 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/************************************************************** Startside ********************************************************/
+.container nav.desk,
+.container nav.mob {
+    width: 100%;
+    background: #FAE8F1;
+    height: 60px;
+    box-shadow: 0 2px 2px 1 rgba(0,0,0,0.14);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav.desk ul{
+    list-style: none;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+nav.desk ul li{
+    width: 20%;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+nav.desk ul li:hover{
+    background: #FFFCFC;
+}
+
+nav ul li.active{
+    background: #FFFCFC;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+nav.mob,
+.hamburger-btn{
+    display: none;
+}
+
+.header {
+    background: url(hi.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 775px;
+    margin-top: 60px;
+    z-index: -1;
+}
+
+/* Dette er min multimediedesigner tekst på startsiden jeg redigere */
+.header-tekst p{
+    color: #FAE8F1;
+    font-size: 40px;
+    padding-left: 10px;
+    text-shadow: 0 0 1px black ;
+}
+
+.header-tekst h1{
+    font-size: 55px;
+    padding-top: 250px;
+    padding-left: 10px;
+
+}
+
+/* Jeg sørger for NADIA bliver med en anden farve */
+.header-tekst h1 span {
+    color: #FAE8F1;
+    text-shadow: 0 0 2px black ;
+}
+
+.logo {
+    width: 140px;
+    float: left;
+    margin-top: -35px;
+    margin-right: 130px;
+    margin-left: 10px;
+}
+
+.logomob {
+    width: 125px;
+    margin-top: 1px;
+}
+
+/* Scroll btn */
+a#scroll-btn {
+    position: absolute;
+    height: 6em;
+    width: 4em;
+    border: 0.5em solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 6.25em;
+    border-radius: 3em;
+}
+
+a#scroll-btn::before {
+    position: absolute;
+    content: "";
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1.2em;
+    height: 1.2em;
+    width: 1.2em;
+    background-color: black;
+    border-radius: 50%;
+    animation: move-down 2s infinite;
+}
+
+@keyframes move-down {
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(2.3em);
+        opacity: 0;
+    }
+}
+
+a#scroll-btn::after {
+    position: absolute;
+    content: "SCROLL DOWN";
+    width: 12em;
+    display: block;
+    width: 12em;
+    text-align: center;
+    left: -4.2em;
+    bottom: -2.5em;
+    font-size: 1em;
+    color: black;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+/* Scroll-button redigering - slut */
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+/************************************************************** Om mig side ********************************************************/
+
+#om {
+    margin-top: 0px;
+}
+
+/* Dette er mit billede på min om mig side, som jeg redigerer */
+#migogskov {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 65px;
+}
+
+/* Jeg beskriver hvor meget det skal fylde og hvor det skal stå */
+.om {
+    width: 100%;
+    padding: 100px 100px;
+}
+
+/* Jeg vil gerne have min tekst bred */
+.om-tekst {
+    width: 100%;
+}
+
+/* Jeg sørger for min tekst og mit billede er under hinanden og der er plads rund om */
+.main {
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Jeg redigerer min tekst "multimediedesigner" */
+.om-tekst h3 {
+    color: #FAE8F1;
+    text-shadow: 1px 1px 3px black ;
+    font-size: 20px;
+}
+
+.om-tekst h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+}
+
+.om-tekst h1::after{
+    content: '';
+    background: #FAE8F1;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Jeg redigerer min tekst om mig selv */
+.om-tekst p{
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+}
+
+/* Dette er mine kompetencer og uddannelse jeg redigerer på så de står ved siden af hinanden og hvor de skal stå */
+.tab-titles {
+    display: flex;
+    margin: 10px 0 20px;
+}
+
+/* Jeg redigerer bla. hvad der sker når musen kører henover mine kompetencer og uddannelse og skrift størrelsen */
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Dette er min linje under teksten når de bliver trykket på */
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #FAE8F1;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+/* Jeg sørger for hvor lang linjen under skal være */
+.tab-links.active-link::after{
+    width: 60%;
+}
+
+/* Jeg vil gerne have noget til at stå under uddannelse og kompetencer dette vil jeg ikke have som liste */
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0px;
+    font-size: 12px;
+}
+
+/* Jeg vil have mine overskrifter på mine lister en anden farve */
+.tab-contents ul li span {
+    color: #FAE8F1;
+    font-size: 14px;
+    text-shadow: 0 0 3px black ;
+}
+
+/* Jeg gemmer alt det væk jeg lige har skrevet lister til som skal være under kompetencer og uddannelse */
+.tab-contents {
+    display: none;
+}
+
+/* Nu sørger jeg for man kan se det der står under kompetencer */
+.tab-contents.active-tab {
+    display: block;
+}
+
+/************************************************************** Portfolio **********************************************************/
+
+#portfolio{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.co{
+    width: 75%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 18rem;
+    align-items: center;
+    display: flex;
+    margin: 10px 20px ;
+    flex-direction: column;
+    background: transparent;
+    box-shadow: 0 0 15px #FAE8F1(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    align-self: normal;
+}
+
+.card img {
+    max-width: 300px;
+}
+
+.card h4{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.card .p{
+    margin-bottom: 10px;
+    
+}
+
+.card .btn{
+    display: inline-block;
+    margin-top: auto;
+    background: #FAE8F1;
+    color: black;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius: 5px;
+}
+
+.co h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 75px;
+}
+
+.co h1::after{
+    content: '';
+    background: #FAE8F1;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/************************************************************** Kontakt ************************************************************/
+#kontakt{
+    margin-top: 0px;
+}
+
+.container1{
+    width: 85%;
+    height: 100vh;
+    padding: 0 8%;
+}
+
+.container1 h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 75px;
+}
+
+.container1 h1::after{
+    content: '';
+    background: #FAE8F1;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin-top: 200px;
+}
+
+.service{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+
+.service i{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #FAE8F1;
+    text-shadow: 0 0 1px black;
+}
+
+.service h2{
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service:hover{
+    background: #FAE8F1;
+    color: black;
+    transform: scale(1.05);
+}
+
+.service:hover i{
+    color: #fce8ff;
+}
+
+/* Jeg beskriver hvordan jeg vil have min footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #FAE8F1;
+    font-weight: 300;
+    margin-top: 320px;
+    border-top: 1px solid black;
+    color: rgb(236, 230, 221);
+}
+
+
+@media screen and (max-width: 700px){
+
+     /****************Forside****************/
+    nav.desk{
+        display: none;
+    }
+
+    nav.mob,
+    .hamburger-btn{
+        display: block;
+    }
+
+    .hamburger-btn{
+        position: relative;
+    }
+
+    .hamburger-btn .fa-bars,
+    .hamburger-btn .fa-times{
+        position: fixed;
+        right: 25px;
+        top: 15px;
+        font-size: 35px;
+        color: black;
+        cursor: pointer;
+    }
+
+    .mob ul{
+        margin-top: -70px;
+        background: #FAE8F1;
+        display: none;
+        list-style: none;
+        z-index: 100;
+    }
+
+    .mob li{
+        text-transform: uppercase;
+        text-align: center;
+        padding: 25px;
+        cursor: pointer;
+        list-style: none;
+        z-index: 100;
+    }
+
+    .mob ul.active{
+        display: block;
+    }
+
+/****************Baggrundsbillede****************/
+    .header {
+        background: url(mobil.png) no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 800px;
+        margin-top: 60px;
+        z-index: -1;
+    }
+
+/****************logo****************/
+     .logomob {
+        width: 118px;
+        margin-top: -25px;
+    }
+
+/****************tekst****************/
+
+/* Dette er min multimediedesigner tekst på startsiden jeg redigere */
+.header-tekst p{
+    font-size: 25px;
+    padding-left: 15px;
+    text-shadow: 0 0 1px black ;
+}
+
+.header-tekst h1{
+    font-size: 35px;
+    padding-top: 10px;
+    padding-left: 15px;
+    width: 300px;
+
+}
+
+/****************scroll down btn****************/
+/* Scroll btn */
+a#scroll-btn {
+    position: absolute;
+    height: 4em;
+    width: 2em;
+    border: 0.4em solid black;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    border-radius: 3em;
+    margin-bottom: 50px;
+}
+/************************************************************** Om mig side ********************************************************/
+
+#om {
+    margin-top: -100px;
+}
+
+/* Dette er mit billede på min om mig side, som jeg redigerer */
+#migogskov {
+    width: 65%;
+    margin-top: 0px;
+    align-items: center;
+}
+
+/* Jeg sørger for min tekst og mit billede er under hinanden og der er plads rund om */
+.main {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.om-tekst h1{
+    text-align: center;
+    padding-top: 5%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    font-size: 40px;
+}
+
+/* Jeg redigerer min tekst om mig selv */
+.om-tekst p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+}
+
+/* Jeg vil gerne have noget til at stå under uddannelse og kompetencer dette vil jeg ikke have som liste */
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0px;
+    font-size: 14px;
+}
+
+/* Jeg vil have mine overskrifter på mine lister en anden farve */
+.tab-contents ul li span {
+    color: #FAE8F1;
+    font-size: 16px;
+    text-shadow: 0 0 3px black ;
+}
+/************************************************************** Portfolio ********************************************************/
+
+.co h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 40px;
+}
+
+.co{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/************************************************************** kontakt og footer ********************************************************/
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+.container1 h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 40px;
+}
+
+/* Jeg beskriver hvordan jeg vil have min footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #FAE8F1;
+    font-weight: 300;
+    margin-top: 100px;
+    border-top: 1px solid black;
+    color: black;
+}
+
+}
+
+
+
+/* Desktop */
+@media screen and (min-width: 1200px){
+    /************* OM MIG ****************/
+    /* Dette er mit billede på min om mig side, som jeg redigerer */
+    #migogskov {
+        width: 400px;
+        margin-top: 50px;
+        margin-right: 50px;
+        margin-left: 10px;
+    }
+    
+    /* Jeg beskriver hvor meget det skal fylde og hvor det skal stå */
+    .om {
+        width: 100%;
+        padding: 100px 100px;
+    
+    }
+    
+    /* Jeg vil gerne have min tekst bred */
+    .om-tekst {
+        width: 700px;
+    }
+    
+    /* Jeg sørger for min tekst of mit billede er ved siden af hinanden og der er plads rund om */
+    .main {
+        width: 100%;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    /* Jeg redigerer min tekst "multimediedesigner" */
+    .om-tekst h3 {
+        color: #FAE8F1;
+    }
+    
+    /* Jeg redigerer min overskrift "Lidt om mig" */
+    .om-tekst h1 {
+        color: black;
+        font-size: 75px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    
+    /* Jeg redigerer min tekst om mig selv */
+    .om-tekst p{
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 28px;
+        margin-bottom: 45px;
+    }
+    
+    /* Dette er mine kompetencer og uddannelse jeg redigerer på så de står ved siden af hinanden og hvor de skal stå */
+    .tab-titles {
+        display: flex;
+        margin: 20px 0 30px;
+    }
+    
+    /* Jeg redigerer bla. hvad der sker når musen kører henover mine kompetencer og uddannelse og skrift størrelsen */
+    .tab-links {
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    /* Dette er min linje under teksten når de bliver trykket på */
+    .tab-links::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #FAE8F1;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+    }
+    
+    /* Jeg sørger for hvor lang linjen under skal være */
+    .tab-links.active-link::after{
+        width: 60%;
+    }
+    
+    /* Jeg vil gerne have noget til at stå under uddannelse og kompetencer dette vil jeg ikke have som liste */
+    .tab-contents ul li{
+        list-style: none;
+        margin: 10px 0px;
+        font-size: 15px;
+    }
+    
+    /* Jeg vil have mine overskrifter på mine lister en anden farve */
+    .tab-contents ul li span {
+        color: #FAE8F1;
+        font-size: 18px;
+    }
+    
+    /* Jeg gemmer alt det væk jeg lige har skrevet lister til som skal være under kompetencer og uddannelse */
+    .tab-contents {
+        display: none;
+    }
+    
+    /* Nu sørger jeg for man kan se det der står under kompetencer */
+    .tab-contents.active-tab {
+        display: block;
+    }
+
+        /* Jeg beskriver hvordan jeg vil have min footer */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 25px 0;
+            background: #FAE8F1;
+            font-weight: 300;
+            margin-top: 0px;
+            border-top: 1px solid black;
+            color: black;
+        }
+}
+
+/************************** små tablets *************************/
+@media screen and (min-width: 620px){
+/*Nav bar*/
+    nav.desk ul li{
+        width: 15%;
+        float: left;
+        text-align: center;
+        line-height: 60px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    .header {
+        background: url(mobil.png) no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 1100px;
+        margin-top: 60px;
+        z-index: -1;
+    }
+
+    .header-tekst p{
+        font-size: 45px;
+        padding-left: 15px;
+        text-shadow: 0 0 1px black ;
+    }
+    
+    .header-tekst h1{
+        font-size: 60px;
+        padding-top: 75px;
+        padding-left: 15px;
+        width: 100%;
+    }
+
+    /**********OM*****************/
+    
+    /* Dette er mit billede på min om mig side, som jeg redigerer */
+#migogskov {
+    width: 33%;
+    margin-top: 0px;
+    align-items: center;
+    padding-left: 25%;
+}
+
+/* Jeg sørger for min tekst og mit billede er under hinanden og der er plads rund om */
+.main {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.om-tekst h1{
+    text-align: center;
+    padding-top: 5%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    font-size: 55px;
+}
+
+/* Jeg redigerer min tekst om mig selv */
+.om-tekst p{
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    line-height: 40px;
+}
+
+/* Jeg vil gerne have noget til at stå under uddannelse og kompetencer dette vil jeg ikke have som liste */
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* Jeg vil have mine overskrifter på mine lister en anden farve */
+.tab-contents ul li span {
+    color: #FAE8F1;
+    font-size: 24px;
+    text-shadow: 0 0 3px black ;
+}
+
+/* Jeg redigerer min tekst "multimediedesigner" */
+.om-tekst h3 {
+    color: #FAE8F1;
+    text-shadow: 1px 1px 3px black ;
+    font-size: 28px;
+}
+
+/************************************************************** Portfolio ********************************************************/
+
+.co h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 55px;
+}
+
+.co{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+      /* Jeg beskriver hvordan jeg vil have min footer */
+      .footer {
+        width: 100%;
+        text-align: center;
+        padding: 25px 0;
+        background: #FAE8F1;
+        font-weight: 300;
+        margin-top: 0px;
+        border-top: 1px solid black;
+        color: black;
+    }
+
+    
+    }
+    
+    /*************************** til computerskærme og større tablets **************************/
+    @media screen and (min-width: 960px){
+    
+    }
+    
+
+
+
+
+
+
+
+

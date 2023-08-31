@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCBDESIGN</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/bb19fd6ca7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".hamburger-btn .fa-times").hide();
+
+            $(".hamburger-btn .fa-bars").click(function(){
+                $(this).hide();
+                $(".hamburger-btn .fa-times").show();
+                $(".mob ul").addClass("active");
+            });
+
+            $(".hamburger-btn .fa-times").click(function(){
+                $(this).hide();
+                $(".hamburger-btn .fa-bars").show();
+                $(".mob ul").removeClass("active");
+            });
+        });
+    </script>
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<!-------------------------------------------------------------Startside------------------------------------------------------------->
+<!--Jeg starter med at lave startsiden, her vil jeg gerne have en scroll down button-->
+<section id="section-1">
+        <a id="scroll-btn"></a>
+
+<!--min navbar-->
+<div class="container">
+
+    <nav class="desk">
+        <ul>
+            <a href="#section-1"><img src="images/ncb1.png" class="logo"></a>
+            <li><a href="#section-1">For<span>side</span></a></li>
+            <li><a href="#portfolio">Portfo<span>lio</span></a></li>
+            <li><a href="#om">O<span>m</span></a></li>
+            <li><a href="#kontakt">Kon<span>takt</span></a></li>
+        </ul>
+    </nav>
+
+    <nav class="mob">
+        <div class="hamburger-btn">
+            <a href="#section-1"><img src="images/ncb1.png" class="logomob"></a>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href="#section-1">For<span>side</span></a></li>
+            <li><a href="#portfolio">Portfo<span>lio</span></a></li>
+            <li><a href="#om">O<span>m</span></a></li>
+            <li><a href="#kontakt">Kon<span>takt</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <div class="header-tekst">
+            <h1>Velkommen til mit portfolio<br>Jeg er <span>Nadia</span> Christensen Boesen</h1>
+            <p>Multimediedesigner</p>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------------------Om Mig-------------------------------------------------------------->
+<!--Dette er til min om mig side-->
+<section id="om">
+
+    <!--min navbar-->
+<div class="container">
+
+    <nav class="desk">
+        <ul>
+            <a href="#section-1"><img src="images/ncb1.png" class="logo"></a>
+            <li><a href="#section-1">For<span>side</span></a></li>
+            <li><a href="#portfolio">Portfo<span>lio</span></a></li>
+            <li><a href="#om">O<span>m</span></a></li>
+            <li><a href="#kontakt">Kon<span>takt</span></a></li>
+        </ul>
+    </nav>
+
+    <nav class="mob">
+        <div class="hamburger-btn">
+            <a href="#section-1"><img src="images/ncb1.png" class="logomob"></a>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href="#section-1">For<span>side</span></a></li>
+            <li><a href="#portfolio">Portfo<span>lio</span></a></li>
+            <li><a href="#om">O<span>m</span></a></li>
+            <li><a href="#kontakt">Kon<span>takt</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="main">
+    <!--Jeg indsætter et billede af mig selv til min om mig side-->  
+            <img src="images/skov.png" id="migogskov">
+    <!--Dette er noget tekst om mig jeg gerne vil have til at stå på siden-->
+            <div class="om-tekst">
+                <h1>Lidt om mig</h1>
+                <h3>Multimediedesigner</h3>
+                <p>Jeg er en udadvendt, ansvarsbevidst og pligtopfyldende ung kvinde på 23 år. I mine forhenværende jobs, har jeg erfaret at jeg er god til at skabe god kontakt og relationer mellem “kunderne” og jeg. Herunder virkelig at sætte mig ind i deres behov og ønsker så jeg kunne hjælpe dem på bedst mulig måde. Efter mange år med hest, har jeg lært at tilsidesætte egne behov, være ansvarsbevidst og mødestabil. Udover alt dette er jeg en enorm kreativ sjæl. Min fritid byder på diverse projekter, på stort set alle fronter. Når først jeg går igang med at fordybe mig i diverse projekter, kan jeg ikke stoppe igen. Derfor er jeg en god medarbejder, da mit job også er en af mine største interesser.  </p>
+    <!--Jeg vil gerne have man kan se mine kompetencer og uddannelse-->
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('kompetencer')">Kompetencer</p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <p class="tab-links" onclick="opentab('uddannelse')">Uddannelse</p>
+                </div>
+    <!--Dette er hvad der skal stå under kompetencer og uddannelse-->
+                <div class="tab-contents active-tab" id="kompetencer">
+                    <ul>
+                        <li><span>Kodning</span><br>Jeg kan kode hjemmesider ved brug af Visual Studio Code.</li>
+                        <li><span>Adobe programmer</span><br>Illustrater, Photoshop, Lightroom, After effects, Premiere Pro, InDesign, Adobe Color, Audition samt Figma, som ligger online.</li>
+                        <li><span>SoMe</span><br>Jeg kan redigere videoer i Premiere Pro og After Effects ydermere redigerer jeg også videoer i capcut til TikTok og Instagram. Til at lave opslag gør jeg brug af div. adobe programmer samt gør jeg stor brug af Canva.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="uddannelse">
+                    <ul>
+                        <li><span>2016-2019</span><br>Jeg har taget en stx på Herning Gymnasium.</li>
+                        <li><span>2019-2022</span><br>Jeg har undervist børn og voksne i ridning, været pædagogmedhjælper, arbejdet i testcenter samt i hjemmeplejen.</li>
+                        <li><span>2021-nu</span><br>Jeg er uddannet hestemassør, hvilket jeg stadig arbejder med samt arbejder jeg på et kontor med diverse opgaver.</li>
+                        <li><span>2022-nu</span><br>Jeg studerer multimediedesign på Zealand Erhvervsakademi i Køge.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-------------------------------------------------------------Portfolio------------------------------------------------------------->
+<section id="portfolio">
+
+    <!--min navbar-->
+    <div class="container">
+
+        <nav class="desk">
+            <ul>
+                <a href="#section-1"><img src="images/ncb1.png" class="logo"></a>
+                <li><a href="#section-1">For<span>side</span></a></li>
+                <li><a href="#portfolio">Portfo<span>lio</span></a></li>
+                <li><a href="#om">O<span>m</span></a></li>
+                <li><a href="#kontakt">Kon<span>takt</span></a></li>
+            </ul>
+        </nav>
+    
+        <nav class="mob">
+            <div class="hamburger-btn">
+                <a href="#section-1"><img src="images/ncb1.png" class="logomob"></a>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href="#section-1">For<span>side</span></a></li>
+                <li><a href="#portfolio">Portfo<span>lio</span></a></li>
+                <li><a href="#om">O<span>m</span></a></li>
+                <li><a href="#kontakt">Kon<span>takt</span></a></li>
+            </ul>
+        </nav>
+
+    <div class="co">
+        <h1>Portfolio</h1>
+        <div class="row1">
+            <div class="card">
+                <img src="images/hej.png" alt="" id="hej">
+                <h4>Balanced</h4>
+                <p>Hjemmeside for virksomheden "Balanced". Balanced er en virksomhed der tilbyder hestemassage og massage til mennesker.</p>
+                <p><br>Alt på hjemmesiden er udarbejdet af mig, inklusiv logo, kodet hjemmeside osv.</p>
+                <a href="https://nadiacb.dk/Hestemassage%20hjemmeside/forside.html" class="btn" target="_blank">Se hjemmesiden her</a>
+            </div>
+    
+            <div class="card">
+                <img src="images/hej1.png" alt="" id="hej">
+                <h4>Bæredygtighed</h4>
+                <p>Hjemmesiden her var et projekt vi havde på studiet.</p>
+                <p><br></vr>Her fandt vi ud af en masse om digital bæredygtighed. Samt besøgte vi nogle designfirmaer i Amsterdam, som fortalte om deres erfaring med bæredygtighed.</p>
+                <a href="https://nadiacb.dk/Sustainable-web/sustainable.html" class="btn" target="_blank">Se hjemmesiden her</a>
+            </div>
+    
+            <div class="card">
+                <img src="images/hej2.png" alt="" id="hej">
+                <h4>Soundevent</h4>
+                <p>Hjemmeside for virksomheden "Soundevent". Soundevent er en virksomhed som tilbyder management og promotion.</p>
+                <p><br>Hjemmesiden er udarbejdet af min studiegruppe og jeg, samt gav vi virksomheden en ny forbedret visuel identitet.</p>
+                <a href="http://soundeventx.dk" class="btn" target="_blank">Se hjemmesiden her</a>
+            </div>
+    
+            <div class="card">
+                <img src="images/Egal.png" alt="" id="hej">
+                <h4>Égal</h4>
+                <p>Hjemmesiden her var et e-commerce projekt vi havde på studiet.</p>
+                <p><br>Denne hjemmeside er lavet gennem wordpress. Den blev dog ikke lavet færdig, da vi havde travlt med at skulle designe t-shirts, net, logoer og udarbejde et koncept og SoMe.</p>
+                <a href="https://sofiekindt.dk/wordpress/" class="btn" target="_blank">Se hjemmesiden her</a>
+            </div>
+        </div>
+    </div>
+    
+    </section>
+
+<!-------------------------------------------------------------Kontakt-------------------------------------------------------------->
+<section id="kontakt">
+
+    <!--min navbar-->
+    <div class="container">
+
+        <nav class="desk">
+            <ul>
+                <a href="#section-1"><img src="images/ncb1.png" class="logo"></a>
+                <li><a href="#section-1">For<span>side</span></a></li>
+                <li><a href="#portfolio">Portfo<span>lio</span></a></li>
+                <li><a href="#om">O<span>m</span></a></li>
+                <li><a href="#kontakt">Kon<span>takt</span></a></li>
+            </ul>
+        </nav>
+    
+        <nav class="mob">
+            <div class="hamburger-btn">
+                <a href="#section-1"><img src="images/ncb1.png" class="logomob"></a>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href="#section-1">For<span>side</span></a></li>
+                <li><a href="#portfolio">Portfo<span>lio</span></a></li>
+                <li><a href="#om">O<span>m</span></a></li>
+                <li><a href="#kontakt">Kon<span>takt</span></a></li>
+            </ul>
+        </nav>
+
+    <div class="container1">
+        <h1>Kontakt mig</h1>
+        <div class="row">
+            <div class="service">
+                <a href="mailto:nadiacb@outlook.dk"><i class="fa fa-envelope"></a></i>
+                <h2>Mail</h2>
+                <p>nadiacb@outlook.dk</p>
+            </div>
+
+            <div class="service">
+                <a href="tel:31760907"><i class="fa fa-phone"></a></i>
+                <h2>Telefon</h2>
+                <p>31760907</p>
+            </div>
+
+            <div class="service">
+                <a href="https://www.linkedin.com/in/nadia-boesen-39892a24a"><i class="fa fa-linkedin"></i></a>
+                <h2>LinkdIn</h2>
+            </div>
+
+            <div class="service">
+                <a href="https://www.messenger.com/t/100002016268003"><i class="fa-brands fa-facebook-messenger"></i></a>
+                <h2>Messenger</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Jeg slutter siden af med en footer-->
+<div class="footer">
+    <p class="end"><small>&copy; NCBDESIGN</small></p>
+ </div>
+</section>
+
+
+    <!---------------------------------------------Sørger for kompetence og uddannelse links--------------------------------------------->
+<!--Jeg sørger for man kan bruge mine "kompetencer" og "uddannelse" links -->
+<!-- Nu har jeg sørget for teksten under mine kompetencer og uddannelser forsvinder hvis man trykker på den -->
+<!-- ved at bruge event sørger jeg for min farve på linjen under kompetencer og uddannelse følger med når jeg klikker på dem -->
+<!-- ved at bruge document sørger jeg for at der kommer min uddannelses ting frem når man klikker på uddannelse og mine kompetencer når der klikkes på den -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+    
+</body>
+</html>
+
+
+
